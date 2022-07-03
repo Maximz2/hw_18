@@ -1,7 +1,7 @@
 name: Buld and deploy workflow
 on: [push]
 jobs:
-  build and push:
+  build_and_push:
     runs-on: ubuntu-latest
     steps:
       - name: list dir
