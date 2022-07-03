@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  web:
+    image: maximz2/sky_pro
+    ports:
+      - "80:8080"
+    restart: always
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRESS_PASSWORD=flask_app_password
+      - POSTGRESS_USER=flask_app
+      - POSTGRESS_DB=flask_app
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
