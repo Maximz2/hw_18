@@ -28,4 +28,4 @@ def configure_app(app: Flask):
 if __name__ == '__main__':
     app_ = create_app()
     configure_app(app_)
-    app_.run(host="localhost", port=10001)
+    app_.run(host="0.0.0.0", port=8080)
